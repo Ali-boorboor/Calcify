@@ -6,11 +6,10 @@ const calculatorKeys = [
     value: "Clear",
     variant: "clear",
     action: actions.CLEAR,
-    ariaLabel: "Clear",
   },
   {
     id: 2,
-    value: "Delete",
+    value: "D",
     variant: "delete",
     action: actions.DELETE,
     ariaLabel: "Delete",
