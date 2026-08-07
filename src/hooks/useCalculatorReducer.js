@@ -122,9 +122,7 @@ const reducer = (state, action) => {
     }
 
     case actions.DELETE: {
-      if (state.overwrite) {
-        return { ...state, overwrite: false, currentOperand: null };
-      }
+      if (state.overwrite) return initialState;
 
       if (state.currentOperand == null) return state;
 
