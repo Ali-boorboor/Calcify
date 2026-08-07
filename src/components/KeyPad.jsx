@@ -15,7 +15,7 @@ const KeyPad = ({ dispatch }) => {
     <div className="grid grid-cols-4 gap-2">
       {calculatorKeys.map((calculatorKey) => (
         <Button
-          onClick={onClickHandler.bind(this, calculatorKey)}
+          onClick={() => onClickHandler(calculatorKey)}
           ariaLabel={calculatorKey.ariaLabel}
           variant={calculatorKey.variant}
           key={calculatorKey.id}

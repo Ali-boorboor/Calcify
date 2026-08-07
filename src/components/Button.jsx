@@ -20,7 +20,7 @@ const Button = ({ children, variant = "digit", ariaLabel, onClick }) => {
   return (
     <button
       className={`text-lg rounded-md border-2 p-1 cursor-pointer shadow-xs transition-colors duration-300 ${buttonVariant}`}
-      aria-label={ariaLabel ? ariaLabel : undefined}
+      aria-label={ariaLabel}
       onClick={onClick}
       type="button"
     >
