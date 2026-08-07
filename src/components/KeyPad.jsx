@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 import calculatorKeys from "@/constants/calculatorKeys";
 
 const KeyPad = ({ dispatch }) => {
-  const onClickHandler = (calculatorKey) => {
+  const handleKeyClick = (calculatorKey) => {
     dispatch({
       type: calculatorKey.action,
       ...(calculatorKey.value !== undefined && {
@@ -15,7 +15,7 @@ const KeyPad = ({ dispatch }) => {
     <div className="grid grid-cols-4 gap-2">
       {calculatorKeys.map((calculatorKey) => (
         <Button
-          onClick={() => onClickHandler(calculatorKey)}
+          onClick={() => handleKeyClick(calculatorKey)}
           ariaLabel={calculatorKey.ariaLabel}
           variant={calculatorKey.variant}
           key={calculatorKey.id}
