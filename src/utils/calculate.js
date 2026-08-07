@@ -1,35 +1,35 @@
 const calculate = ({ currentOperand, previousOperand, operation }) => {
-  const formattedPreviousOperand = Number(previousOperand);
-  const formattedCurrentOperand = Number(currentOperand);
+  const previous = Number(previousOperand);
+  const current = Number(currentOperand);
 
-  if (
-    Number.isNaN(formattedPreviousOperand) ||
-    Number.isNaN(formattedCurrentOperand)
-  ) {
-    return "";
+  if (Number.isNaN(previous) || Number.isNaN(current)) {
+    return {
+      result: null,
+      error: null,
+    };
   }
 
   switch (operation) {
     case "+":
       return {
-        result: formattedPreviousOperand + formattedCurrentOperand,
+        result: previous + current,
         error: null,
       };
 
     case "-":
       return {
-        result: formattedPreviousOperand - formattedCurrentOperand,
+        result: previous - current,
         error: null,
       };
 
     case "×":
       return {
-        result: formattedPreviousOperand * formattedCurrentOperand,
+        result: previous * current,
         error: null,
       };
 
     case "÷":
-      if (formattedCurrentOperand === 0) {
+      if (current === 0) {
         return {
           result: null,
           error: "Cannot divide by zero",
@@ -37,7 +37,7 @@ const calculate = ({ currentOperand, previousOperand, operation }) => {
       }
 
       return {
-        result: formattedPreviousOperand / formattedCurrentOperand,
+        result: previous / current,
         error: null,
       };
 
