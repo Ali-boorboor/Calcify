@@ -116,8 +116,8 @@ const calculatorKeys = [
   {
     id: 17,
     value: ".",
-    variant: "operator",
-    action: actions.CHOOSE_OPERATION,
+    variant: "digit",
+    action: actions.ADD_DIGIT,
     ariaLabel: "Dot",
   },
   {
