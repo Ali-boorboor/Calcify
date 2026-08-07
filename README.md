@@ -4,7 +4,7 @@ A modern calculator built with React, clean code, and scalable state management.
 
 ![total commits](https://img.shields.io/github/commit-activity/t/Ali-boorboor/calcify)
 ![createdAt](https://img.shields.io/github/created-at/ali-boorboor/calcify?color=red)
-![version tag](https://img.shields.io/github/v/tag/ali-boorboor/calcify)
+![version tag](https://img.shields.io/github/v/tag/ali-boorboor/calcify?color=blue)
 ![root files and folders count](https://img.shields.io/github/directory-file-count/ali-boorboor/calcify?color=red)
 
 ## Demo 👀
@@ -63,10 +63,10 @@ Feel free to contact me or add issue if you see any bug or if you had suggestion
 
 ![preview image](https://github.com/Ali-boorboor/calcify/blob/main/public/readme-images/desktop-view.png)
 
-![preview image](https://github.com/Ali-boorboor/calcify/blob/main/public/images/readme-images/mobile-view.png)
+![preview image](https://github.com/Ali-boorboor/calcify/blob/main/public/readme-images/mobile-view.png)
 
-![preview image](https://github.com/Ali-boorboor/calcify/blob/main/public/images/readme-images/performance.png)
+![preview image](https://github.com/Ali-boorboor/calcify/blob/main/public/readme-images/performance.png)
 
-![footer gif](https://github.com/Ali-boorboor/calcify/blob/main/public/images/readme-images/footer-svg.svg)
+![footer gif](https://github.com/Ali-boorboor/calcify/blob/main/public/readme-images/footer-svg.svg)
 
 </div>
