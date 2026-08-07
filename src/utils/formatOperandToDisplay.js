@@ -8,7 +8,9 @@ const formatOperand = (operand) => {
 
   const [integer, decimal] = operand.split(".");
 
-  if (!decimal) return INTEGER_FORMATTER.format(integer);
+  if (decimal === undefined) {
+    return INTEGER_FORMATTER.format(integer);
+  }
 
   return `${INTEGER_FORMATTER.format(integer)}.${decimal}`;
 };

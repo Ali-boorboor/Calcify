@@ -10,21 +10,36 @@ const initialState = {
 };
 
 const reducer = (state, action) => {
+  const { payload } = action;
+
   switch (action.type) {
     case actions.ADD_DIGIT:
       if (state.overwrite) {
-        return { ...state, currentOperand: action.payload, overwrite: false };
+        return {
+          ...state,
+          currentOperand: payload === "." ? "0." : payload,
+          overwrite: false,
+        };
       }
 
-      if (action.payload === "0" && state.currentOperand === "0") return state;
+      if (payload === ".") {
+        if (state.currentOperand == null) {
+          return {
+            ...state,
+            currentOperand: "0.",
+          };
+        }
 
-      if (action.payload === "." && state.currentOperand.includes(".")) {
-        return state;
+        if (state.currentOperand.includes(".")) {
+          return state;
+        }
       }
+
+      if (payload === "0" && state.currentOperand === "0") return state;
 
       return {
         ...state,
-        currentOperand: `${state.currentOperand || ""}${action.payload}`,
+        currentOperand: `${state.currentOperand ?? ""}${payload}`,
       };
 
     case actions.CHOOSE_OPERATION:
@@ -35,14 +50,14 @@ const reducer = (state, action) => {
       if (state.currentOperand == null) {
         return {
           ...state,
-          operation: action.payload,
+          operation: payload,
         };
       }
 
       if (state.previousOperand == null) {
         return {
           ...state,
-          operation: action.payload,
+          operation: payload,
           previousOperand: state.currentOperand,
           currentOperand: null,
         };
@@ -51,7 +66,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         previousOperand: calculate(state).toString(),
-        operation: action.payload,
+        operation: payload,
         currentOperand: null,
       };
 
