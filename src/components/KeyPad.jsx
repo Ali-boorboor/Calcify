@@ -1,11 +1,21 @@
 import Button from "@/components/Button";
 import calculatorKeys from "@/constants/calculatorKeys";
 
-const KeyPad = () => {
+const KeyPad = ({ dispatch }) => {
+  const onClickHandler = (calculatorKey) => {
+    dispatch({
+      type: calculatorKey.action,
+      ...(calculatorKey.value !== undefined && {
+        payload: calculatorKey.value,
+      }),
+    });
+  };
+
   return (
     <div className="grid grid-cols-4 gap-2">
       {calculatorKeys.map((calculatorKey) => (
         <Button
+          onClick={onClickHandler.bind(this, calculatorKey)}
           ariaLabel={calculatorKey.ariaLabel}
           variant={calculatorKey.variant}
           key={calculatorKey.id}
