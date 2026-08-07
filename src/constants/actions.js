@@ -1,4 +1,4 @@
-const actions = {
+const actions = Object.freeze({
   ADD_DIGIT: "add-digit",
 
   CHOOSE_OPERATION: "choose-operation",
@@ -8,6 +8,6 @@ const actions = {
   DELETE: "delete",
 
   EVALUATE: "evaluate",
-};
+});
 
 export default actions;

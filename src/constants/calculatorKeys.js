@@ -1,6 +1,6 @@
 import actions from "@/constants/actions";
 
-const calculatorKeys = [
+const calculatorKeys = Object.freeze([
   {
     id: 1,
     value: "Clear",
@@ -116,6 +116,6 @@ const calculatorKeys = [
     action: actions.EVALUATE,
     ariaLabel: "Equal",
   },
-];
+]);
 
 export default calculatorKeys;
