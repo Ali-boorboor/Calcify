@@ -49,6 +49,8 @@ const reducer = (state, action) => {
     }
 
     case actions.CHOOSE_OPERATION: {
+      if (state.overwrite) return initialState;
+
       if (state.currentOperand == null && state.previousOperand == null) {
         return state;
       }
