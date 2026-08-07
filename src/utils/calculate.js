@@ -11,19 +11,41 @@ const calculate = ({ currentOperand, previousOperand, operation }) => {
 
   switch (operation) {
     case "+":
-      return formattedPreviousOperand + formattedCurrentOperand;
+      return {
+        result: formattedPreviousOperand + formattedCurrentOperand,
+        error: null,
+      };
 
     case "-":
-      return formattedPreviousOperand - formattedCurrentOperand;
+      return {
+        result: formattedPreviousOperand - formattedCurrentOperand,
+        error: null,
+      };
 
     case "×":
-      return formattedPreviousOperand * formattedCurrentOperand;
+      return {
+        result: formattedPreviousOperand * formattedCurrentOperand,
+        error: null,
+      };
 
     case "÷":
-      return formattedPreviousOperand / formattedCurrentOperand;
+      if (formattedCurrentOperand === 0) {
+        return {
+          result: null,
+          error: "Cannot divide by zero",
+        };
+      }
+
+      return {
+        result: formattedPreviousOperand / formattedCurrentOperand,
+        error: null,
+      };
 
     default:
-      return null;
+      return {
+        result: null,
+        error: null,
+      };
   }
 };
 
