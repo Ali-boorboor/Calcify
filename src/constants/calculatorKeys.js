@@ -9,7 +9,7 @@ const calculatorKeys = Object.freeze([
   },
   {
     id: 2,
-    value: "D",
+    value: "DEL",
     variant: "delete",
     action: actions.DELETE,
     ariaLabel: "Delete",
