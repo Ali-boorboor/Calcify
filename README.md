@@ -23,6 +23,18 @@ Feel free to contact me or add issue if you see any bug or if you had suggestion
 [![pnpm](https://img.shields.io/badge/pnpm-F69220?logo=pnpm&logoColor=fff)](#)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff)](#)
 
+## Features 🤖
+
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Decimal numbers
+- Delete input
+- Clear calculator
+- Division-by-zero error handling
+- Responsive UI
+
 ## Scripts 📄
 
 ```bash
