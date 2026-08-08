@@ -19,7 +19,7 @@ const calculatorKeys = Object.freeze([
     value: "÷",
     variant: "operator",
     action: actions.CHOOSE_OPERATION,
-    ariaLabel: "Division",
+    ariaLabel: "Divide",
   },
   {
     id: 4,
@@ -69,7 +69,7 @@ const calculatorKeys = Object.freeze([
     value: "-",
     variant: "operator",
     action: actions.CHOOSE_OPERATION,
-    ariaLabel: "Subtraction",
+    ariaLabel: "Subtract",
   },
   {
     id: 12,
@@ -94,7 +94,7 @@ const calculatorKeys = Object.freeze([
     value: "+",
     variant: "operator",
     action: actions.CHOOSE_OPERATION,
-    ariaLabel: "Sum",
+    ariaLabel: "Add",
   },
   {
     id: 16,
@@ -114,7 +114,7 @@ const calculatorKeys = Object.freeze([
     value: "=",
     variant: "operator",
     action: actions.EVALUATE,
-    ariaLabel: "Equal",
+    ariaLabel: "Equals",
   },
 ]);
 
