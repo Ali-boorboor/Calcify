@@ -6,7 +6,7 @@ const initialState = {
   currentOperand: null,
   previousOperand: null,
   operation: null,
-  overwrite: false,
+  shouldOverwrite: false,
   error: null,
 };
 
@@ -15,13 +15,13 @@ const reducer = (state, action) => {
 
   switch (action.type) {
     case actions.ADD_DIGIT: {
-      if (state.overwrite) {
+      if (state.shouldOverwrite) {
         return {
           ...state,
           currentOperand: payload === "." ? "0." : payload,
+          shouldOverwrite: false,
           previousOperand: null,
           operation: null,
-          overwrite: false,
           error: null,
         };
       }
@@ -49,7 +49,7 @@ const reducer = (state, action) => {
     }
 
     case actions.CHOOSE_OPERATION: {
-      if (state.overwrite) return initialState;
+      if (state.shouldOverwrite) return initialState;
 
       if (state.currentOperand == null && state.previousOperand == null) {
         return state;
@@ -77,7 +77,7 @@ const reducer = (state, action) => {
         return {
           ...state,
           error,
-          overwrite: true,
+          shouldOverwrite: true,
         };
       }
 
@@ -108,13 +108,13 @@ const reducer = (state, action) => {
         return {
           ...state,
           error,
-          overwrite: true,
+          shouldOverwrite: true,
         };
       }
 
       return {
         ...state,
-        overwrite: true,
+        shouldOverwrite: true,
         previousOperand: null,
         operation: null,
         currentOperand: result.toString(),
@@ -122,7 +122,7 @@ const reducer = (state, action) => {
     }
 
     case actions.DELETE: {
-      if (state.overwrite) return initialState;
+      if (state.shouldOverwrite) return initialState;
 
       if (state.currentOperand == null) return state;
 

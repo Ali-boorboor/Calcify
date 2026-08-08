@@ -1,4 +1,4 @@
-import formatOperand from "@/utils/formatOperandToDisplay";
+import formatOperand from "@/utils/formatOperand";
 
 const Display = ({ state }) => {
   return (
