@@ -5,7 +5,7 @@ const calculate = ({ currentOperand, previousOperand, operation }) => {
   if (Number.isNaN(previous) || Number.isNaN(current)) {
     return {
       result: null,
-      error: null,
+      error: "Operands not provided",
     };
   }
 
@@ -44,7 +44,7 @@ const calculate = ({ currentOperand, previousOperand, operation }) => {
     default:
       return {
         result: null,
-        error: null,
+        error: "Invalid operation",
       };
   }
 };
